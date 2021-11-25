@@ -46,14 +46,14 @@ namespace watchApp
         private void timer1_Tick(object sender, EventArgs e)
         {
             saniye++;
-            lblSaniye.Text = String.Format("{0:00}", saniye);
             if (saniye>59)
             {
                 saniye = 0;
                 dakika++;
                 lblDakika.Text = String.Format("{0:00}", dakika);
             }
-            else if (dakika>59)
+            lblSaniye.Text = String.Format("{0:00}", saniye);
+            if (dakika>59)
                 {
                     dakika = 0;
                     saat++;
