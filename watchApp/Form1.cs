@@ -49,7 +49,6 @@ namespace watchApp
             lblSaniye.Text = String.Format("{0:00}", saniye);
             if (saniye>59)
             {
-                lblSaniye.Text = String.Format("{0:00}", saniye);
                 saniye = 0;
                 dakika++;
                 lblDakika.Text = String.Format("{0:00}", dakika);
@@ -68,9 +67,6 @@ namespace watchApp
         private void Sıfırla_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            saniye=0;
-            dakika=0;
-            saat=0;
             lblSifirla();
             btnPause.Enabled = false;
             btnSifirla.Enabled = false;
@@ -79,6 +75,9 @@ namespace watchApp
         private void lblSifirla()
         {
             btnPause.Text = "Durdur";
+            saniye = 0;
+            dakika = 0;
+            saat = 0;
             NumberOfClick = 0;
             lblSaniye.Text = String.Format("{0:00}", saniye);
             lblDakika.Text = String.Format("{0:00}", dakika);
