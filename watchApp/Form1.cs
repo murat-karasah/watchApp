@@ -13,11 +13,9 @@ namespace watchApp
     public partial class Form1 : Form
     {
         public int dakika = 0, saniye=0,saat=0,sayac=0, NumberOfClick = 0;
-
         public Form1()
         {
             InitializeComponent();
-          
         }
         private void btnStart_Click(object sender, EventArgs e)
         {
@@ -41,18 +39,10 @@ namespace watchApp
                     btnPause.Text = "Durdur";
                     NumberOfClick = 0;
                     break;
-              
                 default:
-                   
                     break;
             }
-
-          
-          
         }
-
-      
-
         private void timer1_Tick(object sender, EventArgs e)
         {
             saniye++;
@@ -63,7 +53,6 @@ namespace watchApp
                 saniye = 0;
                 dakika++;
                 lblDakika.Text = String.Format("{0:00}", dakika);
-
             }
             else if (dakika>59)
                 {
@@ -74,10 +63,8 @@ namespace watchApp
             else if (saat>23)
             {
                 timer1.Stop();
-
             }
         }
-
         private void Sıfırla_Click(object sender, EventArgs e)
         {
             timer1.Stop();
@@ -88,9 +75,7 @@ namespace watchApp
             btnPause.Enabled = false;
             btnSifirla.Enabled = false;
             btnStart.Enabled = true;
-
         }
-
         private void lblSifirla()
         {
             btnPause.Text = "Durdur";
