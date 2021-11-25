@@ -19,7 +19,6 @@ namespace watchApp
             InitializeComponent();
           
         }
-
         private void btnStart_Click(object sender, EventArgs e)
         {
             lblSifirla();
@@ -28,7 +27,6 @@ namespace watchApp
             btnSifirla.Enabled = true;  
             btnStart.Enabled = false;
         }
-
         private void btnPause_Click(object sender, EventArgs e)
         {
             ++NumberOfClick;
@@ -64,19 +62,15 @@ namespace watchApp
                 lblSaniye.Text = String.Format("{0:00}", saniye);
                 saniye = 0;
                 dakika++;
-            }
-           else if (dakika>0)
-            {
                 lblDakika.Text = String.Format("{0:00}", dakika);
-                if (dakika>59)
+
+            }
+            else if (dakika>59)
                 {
                     dakika = 0;
                     saat++;
                     lblSaat.Text = String.Format("{0:00}", saat);
-
                 }
-
-            }
             else if (saat>23)
             {
                 timer1.Stop();
@@ -87,7 +81,6 @@ namespace watchApp
         private void Sıfırla_Click(object sender, EventArgs e)
         {
             timer1.Stop();
-            timer1.Dispose();
             saniye=0;
             dakika=0;
             saat=0;
